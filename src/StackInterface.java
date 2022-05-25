@@ -1,4 +1,4 @@
-public interface ShareStack {
+public interface StackInterface {
 
     //testing intellij java ide shareStack
 
