@@ -37,7 +37,9 @@ public class MyStackDD {
      * Removes element from top of the stack
      */
     public Object pop(){
+
         if(first == null) {
+            //push("");
             throw new NoSuchElementException();
         }
         Object element = first.data;
@@ -52,7 +54,6 @@ public class MyStackDD {
     public boolean empty(){
         return first == null;
     }
-
     class Node {
         public Object data;
         public MyStackDD.Node next;

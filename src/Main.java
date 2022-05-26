@@ -27,12 +27,9 @@ try {
         stackDC.push(2);
         stackDC.push(2);
         //stackDC.push(2);
+        //stackDC.push(2);
         stackDC.pop();
-
-
-
-
-
-
+        stackDC.pop();
+        stackDC.push(2);
     }
 }

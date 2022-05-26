@@ -2,6 +2,7 @@ import java.util.*;
 
 public class MyStackDC {
 /*
+    //given from whiteboard
     List <MyClass> st;
     //constructor
     public boolean isFull (){
@@ -49,7 +50,7 @@ public void push(Object element){
         first = newNode;
         //if more than five elements, the stack will overflow
         if (count > 4) {
-           throw new NoSuchElementException("stack too big");
+            throw new NoSuchElementException("stack too big");
         }else{
         count++;
         }
@@ -64,13 +65,23 @@ public void push(Object element){
  */
 public Object pop() {
     //throw exception when there is nothing to pop
-        if (isEmpty()) {
+    try {
+        if (count ==0) {
+            isEmpty();
             throw new NoSuchElementException("there is nothing to pop");
+        } else {
+            count = count -1;
+            Object element = first.data;
+            first = first.next;
+            return element;
         }
-         Object element = first.data;
-        first = first.next;
-        return element;
     }
+        catch(NoSuchElementException e){
+            System.out.println("There is nothing to pop");
+        }
+        return null;
+    }
+
 
     /**
      * Checks if stack is empty
