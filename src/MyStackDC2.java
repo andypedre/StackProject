@@ -26,6 +26,7 @@ public class MyStackDC2 {
     public boolean isEmpty(){
         return MyList.size() ==0;
     }
+
     //check if the linked list is full
     public boolean isFull(){
         return M
